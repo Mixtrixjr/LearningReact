@@ -30,14 +30,15 @@ function App(){
        <p>{herramientas[1]}</p>
        <br />
        <p>{herramientas[2]}</p>
-
+<h2>Estudiantes</h2>
        {listaestudiantes.map((estu) => (
   <Estudiante 
     key={estu.id}
     nombre={estu.nombre}
     carrera={estu.carrera}
   />))}
-  
+  <h2>Juegos</h2>
+
   {listajuegos.map((juego)=>(
     <Juegos 
     key={juego.id}
