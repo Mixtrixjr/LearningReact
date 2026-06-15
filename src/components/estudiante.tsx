@@ -1,4 +1,4 @@
-import { estudiante } from "../interfaces/interfaceestudiante";
+import { estudiante } from "../interfaces/interfaces";
 
 export function Estudiante(props: estudiante )
 {
