@@ -6,7 +6,11 @@ function App(){
   const nombreprofesor: string = "maestro react";
   const año: number = 2026;
   const herramientas: string[] = ["react","node","ts"]
-
+  const listaestudiantes = [
+    {id: 1, nombre:"Pedro",carrera:"Artes"},
+    {id: 2, nombre:"Juan",carrera:"Humanidades"},
+    {id: 3, nombre:"Mateo",carrera:"Ingenieria"} 
+  ]
   return (
     
     <div className="Contenedor">
@@ -19,8 +23,13 @@ function App(){
        <p>{herramientas[1]}</p>
        <br />
        <p>{herramientas[2]}</p>
-       <Estudiante nombre='Pedro' carrera='Ingenieria'></Estudiante>
-       <Estudiante nombre='Jair' carrera='Humanidades'></Estudiante>
+       {listaestudiantes.map((estu) => (
+  <Estudiante 
+    key={estu.id}
+    nombre={estu.nombre}
+    carrera={estu.carrera}
+  />
+))}
        <br></br>
        <Contador></Contador>
     </div>
