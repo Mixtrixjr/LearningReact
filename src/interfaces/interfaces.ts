@@ -4,6 +4,7 @@ export interface estudiante{
 }
 
 export interface juegos {
+    id: number
     titulo: string
     genero: string
     plataforma: string
