@@ -1,7 +1,12 @@
 import './App.css'
 import { Contador } from './components/contador';
 import { Estudiante } from './components/estudiante';
-import { Juegos, select } from './components/juegos';
+import { Juegos } from './components/juegos';
+
+export function select (nombre: string)
+{
+   return alert(`Juego ${nombre} Seleccionado`)
+}
 
 function App(){
   const nombreprofesor: string = "maestro react";
@@ -20,6 +25,7 @@ function App(){
     {id: 4, Nombre: "Mortal Shell 2", Genero:"Souls Like", Plataforma:"PC"}
 
   ]
+
 
   return (
     
