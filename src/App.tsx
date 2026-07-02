@@ -3,6 +3,11 @@ import { Contador } from './components/contador';
 import { Estudiante } from './components/estudiante';
 import { Juegos } from './components/juegos';
 
+export function select (nombre: string)
+{
+   return alert(`Juego ${nombre} Seleccionado`)
+}
+
 function App(){
   const nombreprofesor: string = "maestro react";
   const año: number = 2026;
@@ -15,9 +20,13 @@ function App(){
 
   const listajuegos = [
     {id: 1, Nombre: "STALKER", Genero:"Shooter", Plataforma:"PC"},
-    {id: 1, Nombre: "Age Of Empires", Genero:"RTS", Plataforma:"XBOX"},
-    {id: 1, Nombre: "God Of War", Genero:"Aventuras", Plataforma:"PS5"}
+    {id: 2, Nombre: "Age Of Empires", Genero:"RTS", Plataforma:"XBOX"},
+    {id: 3, Nombre: "God Of War", Genero:"Aventuras", Plataforma:"PS5"},
+    {id: 4, Nombre: "Mortal Shell 2", Genero:"Souls Like", Plataforma:"PC"}
+
   ]
+
+
   return (
     
     <div className="Contenedor">
@@ -30,7 +39,7 @@ function App(){
        <p>{herramientas[1]}</p>
        <br />
        <p>{herramientas[2]}</p>
-<h2>Estudiantes</h2>
+<h2>Estudiantes</h2> 
        {listaestudiantes.map((estu) => (
   <Estudiante 
     key={estu.id}
@@ -42,9 +51,11 @@ function App(){
   {listajuegos.map((juego)=>(
     <Juegos 
     key={juego.id}
+    id={juego.id}
     titulo={juego.Nombre}
     genero={juego.Genero}
-    plataforma={juego.Plataforma}>
+    plataforma={juego.Plataforma}
+    seleccionado={select}>
     </Juegos>
   ))}
 

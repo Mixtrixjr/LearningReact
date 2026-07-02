@@ -8,4 +8,5 @@ export interface juegos {
     titulo: string
     genero: string
     plataforma: string
+    seleccionado:(nombre:string) => void
 }
