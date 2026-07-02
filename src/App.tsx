@@ -1,7 +1,7 @@
 import './App.css'
 import { Contador } from './components/contador';
 import { Estudiante } from './components/estudiante';
-import { Juegos } from './components/juegos';
+import { Juegos, select } from './components/juegos';
 
 function App(){
   const nombreprofesor: string = "maestro react";
@@ -20,6 +20,7 @@ function App(){
     {id: 4, Nombre: "Mortal Shell 2", Genero:"Souls Like", Plataforma:"PC"}
 
   ]
+
   return (
     
     <div className="Contenedor">
@@ -47,7 +48,8 @@ function App(){
     id={juego.id}
     titulo={juego.Nombre}
     genero={juego.Genero}
-    plataforma={juego.Plataforma}>
+    plataforma={juego.Plataforma}
+    seleccionado={select}>
     </Juegos>
   ))}
 
